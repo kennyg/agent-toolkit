@@ -1,0 +1,54 @@
+[project]
+site_name = "My Documentation"
+site_url = "https://example.com/"
+site_description = "Project documentation"
+
+[project.theme]
+variant = "modern"
+
+[project.theme.palette]
+scheme = "default"
+primary = "indigo"
+accent = "indigo"
+
+[project.theme.features]
+features = [
+    "navigation.instant",
+    "navigation.tracking",
+    "navigation.top",
+    "search.suggest",
+    "search.highlight",
+    "content.code.copy",
+    "content.code.annotate",
+    "content.tabs.link",
+]
+
+[project]
+nav = [
+    { "Home" = "index.md" },
+    { "Getting Started" = "getting-started.md" },
+]
+
+[project.markdown_extensions]
+extensions = [
+    "admonition",
+    "pymdownx.details",
+    "pymdownx.superfences",
+    "pymdownx.tabbed",
+    "pymdownx.highlight",
+    "pymdownx.inlinehilite",
+    "pymdownx.snippets",
+    "pymdownx.caret",
+    "pymdownx.keys",
+    "pymdownx.mark",
+    "pymdownx.tilde",
+    "attr_list",
+    "md_in_html",
+    "def_list",
+    "tables",
+    "footnotes",
+    "toc",
+]
+
+[project.plugins]
+plugins = ["search"]
