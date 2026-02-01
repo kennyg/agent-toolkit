@@ -1,5 +1,13 @@
 [tools]
+# Linters (for hk pre-commit hooks)
 shellcheck = "latest"
 shfmt = "latest"
 taplo = "latest"
 typos = "latest"
+
+# Python
+uv = "latest"
+python = "3.13"
+
+[env]
+_.python.venv = { path = ".venv", create = true }
