@@ -1,5 +1,5 @@
 ---
-name: zensical
+name: zensical-setup
 description: Generate documentation sites using Zensical (from the creators of Material for MkDocs). Use when setting up a new Zensical documentation project, creating markdown pages with admonitions/tabs/code blocks/annotations, or configuring zensical.toml.
 ---
 
