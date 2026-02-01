@@ -11,7 +11,28 @@ Configure [hk](https://hk.jdx.dev) git hooks with appropriate linters for any pr
 
 ```bash
 brew install hk
-# or: mise use -g hk
+```
+
+Install linters globally (hk runs tools in a subshell):
+
+```bash
+# Universal
+brew install typos-cli
+
+# Shell
+brew install shellcheck shfmt
+
+# Python
+brew install ruff
+
+# JS/TS
+brew install biome
+
+# Go
+brew install golangci-lint
+
+# TOML
+brew install taplo
 ```
 
 ## Workflow
