@@ -28,19 +28,6 @@ site_dir = "site"
 use_directory_urls = true
 dev_addr = "localhost:8000"
 
-[project.nav]
-nav = [
-    { "Home" = "index.md" },
-    { "Getting Started" = [
-        { "Installation" = "getting-started/installation.md" },
-        { "Quick Start" = "getting-started/quickstart.md" },
-    ]},
-    { "Guide" = [
-        { "Overview" = "guide/index.md" },
-        { "Features" = "guide/features.md" },
-    ]},
-]
-
 [project.theme]
 variant = "modern"
 custom_dir = "docs/overrides"
@@ -86,6 +73,26 @@ extra_css = ["stylesheets/extra.css"]
 
 [project.extra_javascript]
 extra_javascript = ["javascripts/extra.js"]
+
+[project.markdown_extensions]
+extensions = [
+    "admonition",
+    "pymdownx.details",
+    "pymdownx.superfences",
+    "pymdownx.tabbed",
+    "pymdownx.highlight",
+    "pymdownx.inlinehilite",
+    "pymdownx.emoji",
+    "attr_list",
+    "md_in_html",
+    "def_list",
+    "tables",
+    "footnotes",
+    "toc",
+]
+
+[project.plugins]
+plugins = ["search"]
 ```
 
 ## Configuration Settings
@@ -102,10 +109,14 @@ extra_javascript = ["javascripts/extra.js"]
 | `use_directory_urls` | Clean URLs without .html | `true` |
 | `dev_addr` | Dev server address | `localhost:8000` |
 
+## Navigation
+
+Navigation is auto-generated from the `docs/` folder structure. Files are ordered alphabetically; use numeric prefixes (e.g., `01-intro.md`) to control order.
+
 ## Theme Variants
 
 - `modern` - Default, optimized for readability
-- `classic` - Traditional Material for MkDocs style
+- `classic` - Traditional style
 
 ## Theme Features
 
@@ -129,29 +140,6 @@ extra_javascript = ["javascripts/extra.js"]
 
 **Primary colors:** `red`, `pink`, `purple`, `deep-purple`, `indigo`, `blue`, `light-blue`, `cyan`, `teal`, `green`, `light-green`, `lime`, `yellow`, `amber`, `orange`, `deep-orange`, `brown`, `grey`, `blue-grey`, `black`, `white`
 
-## Navigation Patterns
-
-**Simple:**
-```toml
-[project]
-nav = [
-    { "Home" = "index.md" },
-    { "About" = "about.md" },
-]
-```
-
-**Sections:**
-```toml
-[project]
-nav = [
-    { "Home" = "index.md" },
-    { "User Guide" = [
-        { "Installation" = "guide/install.md" },
-        { "Configuration" = "guide/config.md" },
-    ]},
-]
-```
-
 ## Markdown Extensions
 
 Extensions are configured under `[project.markdown_extensions]`:
@@ -165,6 +153,11 @@ extensions = [
     "pymdownx.tabbed",
     "pymdownx.highlight",
     "pymdownx.inlinehilite",
+    "pymdownx.emoji",
+    "pymdownx.caret",
+    "pymdownx.keys",
+    "pymdownx.mark",
+    "pymdownx.tilde",
     "attr_list",
     "md_in_html",
     "def_list",
@@ -173,3 +166,23 @@ extensions = [
     "toc",
 ]
 ```
+
+| Extension | Enables |
+|-----------|---------|
+| `admonition` | Note/warning/tip boxes |
+| `pymdownx.details` | Collapsible sections |
+| `pymdownx.superfences` | Fenced code blocks, mermaid |
+| `pymdownx.tabbed` | Content tabs |
+| `pymdownx.highlight` | Code syntax highlighting |
+| `pymdownx.inlinehilite` | Inline code highlighting |
+| `pymdownx.emoji` | Icons and emoji |
+| `pymdownx.caret` | Superscript (`^^text^^`) |
+| `pymdownx.keys` | Keyboard keys (`++ctrl+c++`) |
+| `pymdownx.mark` | Highlighted text (`==text==`) |
+| `pymdownx.tilde` | Subscript, strikethrough |
+| `attr_list` | Add attributes to elements |
+| `md_in_html` | Markdown inside HTML |
+| `def_list` | Definition lists |
+| `tables` | Tables |
+| `footnotes` | Footnotes |
+| `toc` | Table of contents |

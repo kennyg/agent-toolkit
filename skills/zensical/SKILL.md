@@ -5,7 +5,7 @@ description: Generate documentation sites using Zensical (from the creators of M
 
 # Zensical
 
-Generate documentation using Zensical - a modern static site generator from the creators of Material for MkDocs. Uses TOML configuration for clarity.
+Generate documentation using Zensical - a modern static site generator from the creators of Material for MkDocs. Uses TOML configuration.
 
 ## Workflow
 
@@ -43,7 +43,7 @@ zensical build
 
 ## Configuration
 
-Zensical uses `zensical.toml` (TOML format, not YAML):
+Zensical uses `zensical.toml`:
 
 ```toml
 [project]
@@ -63,19 +63,15 @@ features = [
     "content.tabs.link",
     "navigation.instant",
 ]
-
-[project]
-nav = [
-    { "Home" = "index.md" },
-    { "Guide" = "guide.md" },
-]
 ```
+
+Navigation is auto-generated from the `docs/` folder structure.
 
 For full configuration options, see `references/config.md`.
 
 ## Creating Pages
 
-All pages go in the `docs/` directory as markdown files. Update `nav` in `zensical.toml` to include new pages.
+Add markdown files to the `docs/` directory. Zensical auto-generates navigation from the folder structure.
 
 ### Quick Syntax Reference
 

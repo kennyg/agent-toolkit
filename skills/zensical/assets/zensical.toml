@@ -23,12 +23,6 @@ features = [
     "content.tabs.link",
 ]
 
-[project]
-nav = [
-    { "Home" = "index.md" },
-    { "Getting Started" = "getting-started.md" },
-]
-
 [project.markdown_extensions]
 extensions = [
     "admonition",
@@ -37,11 +31,7 @@ extensions = [
     "pymdownx.tabbed",
     "pymdownx.highlight",
     "pymdownx.inlinehilite",
-    "pymdownx.snippets",
-    "pymdownx.caret",
-    "pymdownx.keys",
-    "pymdownx.mark",
-    "pymdownx.tilde",
+    "pymdownx.emoji",
     "attr_list",
     "md_in_html",
     "def_list",
