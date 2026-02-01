@@ -19,6 +19,7 @@ Skills are reusable extensions that give AI coding agents specialized capabiliti
 | Skill | Description |
 |-------|-------------|
 | [github-gist](skills/github-gist/) | Create GitHub gists from files or snippets |
+| [hk-setup](skills/hk-setup/) | Set up hk git hooks with pre-commit linters |
 | [zensical](skills/zensical/) | Generate documentation sites using Zensical |
 
 ## Installation
