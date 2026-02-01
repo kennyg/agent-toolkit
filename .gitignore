@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Local settings
+.claude/
+.cursor/
+.vscode/
+.idea/
+
+# Lock files
+*.lock
+bun.lock
+bun.lockb
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
