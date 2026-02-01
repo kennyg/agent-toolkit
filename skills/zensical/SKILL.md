@@ -19,12 +19,9 @@ Generate documentation using Zensical - a modern static site generator from the 
 # Create project directory
 mkdir my-docs && cd my-docs
 
-# Set up virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Install Zensical
-pip install zensical
+# Initialize and install Zensical
+uv init
+uv add zensical
 ```
 
 Copy starter files from this skill's `assets/` directory:
@@ -33,12 +30,12 @@ Copy starter files from this skill's `assets/` directory:
 
 Run the dev server:
 ```bash
-zensical serve
+uv run zensical serve
 ```
 
 Build for production:
 ```bash
-zensical build
+uv run zensical build
 ```
 
 ## Configuration
