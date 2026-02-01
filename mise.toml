@@ -11,3 +11,7 @@ python = "3.13"
 
 [env]
 _.python.venv = { path = ".venv", create = true }
+
+[tasks]
+check = "hk check --all"
+fix = "hk fix --all"
