@@ -1,0 +1,5 @@
+[tools]
+shellcheck = "latest"
+shfmt = "latest"
+taplo = "latest"
+typos = "latest"
